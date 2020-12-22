@@ -1,0 +1,174 @@
+// Place all the styles related to the Regitrations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.main-container-signup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40em;
+  height: 40em;
+  background: #FFFFFF;
+  margin: 5% 25% 5% 25%;
+  padding: 1% 2% 2% 2%;
+  border-radius: 0.5em;
+  flex-wrap: nowrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.sign-up{
+  display:flex;
+  flex-direction: column;
+  width: 15em;
+  margin: 0 2% 0 -2%;
+  border-right: 1px solid #d9d9d9;
+}
+
+.signup-label{
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.signup-name {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 5%;
+}
+
+.label-name{
+  width: 10em;
+  margin-right: 30px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  color: #999999;
+  font-weight: bold;
+}
+
+.input-name{
+  width: 7em;
+  height: 1.5em;
+  margin-top: 5%;
+  text-indent: 2%;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(200,200,200,0.3);
+  outline: none;
+}
+
+.signup-email{
+
+  margin-top: 5%;
+}
+.label-email{
+
+  width: 10em;
+  margin-right: 30px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  color: #999999;
+  font-weight: bold;
+
+}
+
+.input-email{
+
+  width: 15em;
+  height: 1.5em;
+  margin-top: 2%;
+  text-indent: 2%;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(200,200,200,0.3);
+  outline: none;
+
+}
+
+.signup-password{
+  margin-top: 5%;
+}
+
+.label-password{
+
+  width: 10em;
+  margin-right: 30px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  color: #999999;
+  font-weight: bold;
+}
+
+.input-password{
+
+  width: 15em;
+  height: 1.5em;
+  margin-top: 2%;
+  text-indent: 2%;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(200,200,200,0.3);
+  outline: none;
+
+}
+
+.sign-up p {
+
+  width: 15em;
+  margin: 2%;
+  margin-top: 5%;
+  font-size: 13px;
+  font-weight: bold;
+  color: #999999;
+
+}
+
+.sign-up p a {
+  text-decoration: none;
+  color: blue;
+}
+
+.sign-up p a:hover{
+  text-decoration: underline;
+}
+
+.actions{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  width: 13em;
+  margin-top: 5%;
+
+}
+
+.actions a {
+
+  text-decoration: none;
+  font-size: 13px;
+  color: blue;
+  margin-right: 5%;
+
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.signup-btn{
+  background: #3e78ad;
+  font-size: 15px;
+  line-height: 1.4;
+  color: white;
+  opacity: 0.5;
+  outline: none;
+  border: 1px solid #3a66ad;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+}
