@@ -1,3 +1,37 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.home-main-container{
+  background: #f0f0f0;
+  z-index: 0;
+  height: 3000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-questions-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: white;
+  width: 30em;
+  height: 10em;
+  margin: 3%;
+  border: 1px solid #e6e6e6;
+}
+
+.home-questions-box a{
+  margin-left: 30px;
+  width: 30em;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+.home-answer-box {
+  margin-left: 30px;
+}

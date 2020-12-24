@@ -1,0 +1,13 @@
+<div id="post-comment-form">
+<div>
+  <%= link_to '<button type="button" class="comment-profile-logo"></button>'.html_safe, edit_user_registration_path(current_user) %>
+</div>
+<%= form_for :comment, :url => { :action => "insertComment" }  do |f| %>
+<%=f.text_area :ans, :class => "comment-form-field" %>
+<%= f.text_field :answer_id, :type => 'hidden', :value => a.id %>
+<%= f.text_field :user_id, :type => 'hidden', :value => current_user.id %>
+<div id="comment-submit">
+<%= f.submit%>
+</div>
+<% end %>
+</div>

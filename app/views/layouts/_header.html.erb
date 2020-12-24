@@ -1,0 +1,15 @@
+<header>
+  <div class="header-quora-logo"></div>
+  <div class="header-home"><div class="header-home-logo"><%= image_tag("header/home.png")%></div><%= link_to 'Home', root_path %></div>
+  <div class="header-following"><div class='header-following-logo'><%= image_tag("header/to-do-list.png")%></div><a href="#">Following</a></div>
+  <div class="header-answer"><div class='header-answer-logo'><%= image_tag("header/answer.png")%></div><%= link_to 'Answers', root_path %></div>
+  <div class="header-spaces"><div class='header-spaces-logo'><%= image_tag("header/spaces.png")%></div><a href="#">Spaces</a></div>
+  <div class="header-notifications"><div class='header-notifications-logo'><%= image_tag("header/notifications.png")%></div><a href="#">Notifications</a></div>
+  <div class="header-search-container">
+    <form action="#">
+      <input type="text" placeholder="  Search Quora" name="search">
+    </form>
+  </div>
+  <div class="header-profile"><%= link_to '<button type="button" class="header-profile-logo"></button>'.html_safe, edit_user_registration_path(current_user) %></div>
+  <div class="header-post-question"><%= link_to '<button type="button" class="header-post-question-btn">Add Question</button>'.html_safe, new_question_path %></div>
+</header>

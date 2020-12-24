@@ -1,8 +1,25 @@
-<h1>Qoura</h1>
+<%= render :partial => 'layouts/header' %>
+<div class="home-main-container">
+<div>
+</div>
+<div class="home-questions-container">
 <% @question.each do |que| %>
-<%= que.email %><br />
-<%= que.ques %><br /><br />
+<div class="home-questions-box">
+  <div>
+  <h3><%= link_to que.ques, new_answer_path(:ques_id => que.id) %></h3>
+  </div>
+  <% @answer.each do |a| %>
+    <% if a.question_id == que.id %>
+      <div class='home-answer-box'>
+      <%= a.ans %>
+      </div>
+      <% break %>
+    <% end %>
+  <% end %>
+</div>
 <% end %>
-<%= link_to 'Edit', edit_user_registration_path(current_user) %>
 <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-<%= link_to 'Post Question', new_question_path %>
+</div>
+<div>
+</div>
+</div>

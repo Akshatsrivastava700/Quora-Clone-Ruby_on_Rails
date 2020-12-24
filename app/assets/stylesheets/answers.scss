@@ -1,0 +1,113 @@
+// Place all the styles related to the Answers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+hr{
+  width: 35.3em;
+  height: 0.5px;
+  background: #000000;
+  margin-left: 9.5%;
+}
+
+.question-answer-main-container{
+  background: #ffffff;
+  z-index: 0;
+  height: 3000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.question-answer-main-container h1{
+  margin-left: 4em;
+}
+
+#answer-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: white;
+  margin-left: 7em;
+}
+
+#answer-btn:hover{
+  color: blue;
+}
+
+.question-answer-logo{
+
+  margin-right: 10%;
+}
+
+#post-answer-form{
+  background: #f0f0f0;
+  height: 22em;
+  width: 35em;
+  margin-left: 8.0em;
+  border: 1px solid #e6e6e6;
+}
+.answer-form-field{
+  width: 41.5em;
+  height: 17em;
+  margin-top: 5%;
+  transform: translateX(0.05%);
+  resize: none;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+
+#ans-submit input{
+
+  background-color: #2e69ff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  width: 8em;
+  height: 3em;
+  color: #ffffff;
+  margin: 2%;
+  margin-top: 1%;
+  transition: 0.5s;
+
+}
+
+#ans-submit input:hover{
+  background-color: #3b5086;
+}
+
+.answer-box{
+  margin-left: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+
+.answer-display{
+  display: flex;
+  flex-direction: row;
+  width: 35.5em;
+  height: 10em;
+  border-top: 1px solid  #e6e6e6;
+
+}
+
+.answer-display p{
+  margin-top: 5%;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.answer-profile-logo{
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  border: 1px solid  grey;
+  margin-top: 2%;
+  margin-left: 2%;
+  background-color: #efefef;
+  outline: none;
+}

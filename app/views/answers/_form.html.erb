@@ -1,0 +1,12 @@
+<div id="post-answer-form">
+<div>
+  <%= link_to '<button type="button" class="answer-profile-logo"></button>'.html_safe, edit_user_registration_path(current_user) %>
+</div>
+<%= form_for :answer, :url => { :action => "insert" }  do |f| %>
+<%=f.text_area :ans, :class => "answer-form-field" %>
+<%= f.text_field :question_id, :type => 'hidden', :value => params[:ques_id] %>
+<div id="ans-submit">
+<%= f.submit%>
+</div>
+<% end %>
+</div>

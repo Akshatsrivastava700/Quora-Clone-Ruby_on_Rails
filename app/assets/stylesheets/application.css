@@ -13,3 +13,147 @@
  *= require_tree .
  *= require_self
  */
+header a{
+  text-decoration: none;
+  color: #636466;
+  font-weight: 500;
+}
+
+header {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  margin-left: -2%;
+  margin-top: -1.2%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid  #e6e6e6;
+}
+
+.header-quora-logo{
+  background: url("https://assets.entrepreneur.com/content/3x2/2000/20190211224126-quora-logo-crop.jpeg?width=700&crop=2:1");
+  height: 55px;
+  width: 130px;
+  background-size: cover;
+  overflow: hidden;
+  background-position:center;
+  margin-right: -0%;
+  margin-top: 0.5%;
+  z-index: -1;
+}
+
+.header-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.header-home-logo{
+  height: 25px;
+  width: 25px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 8%;
+}
+
+.header-home a{
+  text-decoration: none;
+  color: #636466;
+}
+
+.header-following{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.header-following-logo{
+  margin-right: 5%
+}
+
+.header-answer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.header-answer-logo{
+  margin-right: 8%;
+}
+
+.header-spaces{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2%;
+
+}
+
+.header-spaces-logo{
+  margin-right: 8%;
+}
+
+.header-notifications{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2%;
+
+}
+
+.header-notifications-logo{
+  margin-right: 5%;
+}
+
+.header-search-container{
+  margin-right: 2%;
+}
+
+.header-search-container input{
+  height: 2.5em;
+  width: 20em;
+  border: 2px solid #e6e6e6;
+  opacity: 1;
+  border-radius: 5px;
+
+}
+
+.header-profile{
+  margin-right: 2%;
+}
+
+.header-profile-logo{
+  width: 2em;
+  height: 2em;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+}
+
+.header-post-question-btn{
+  background: rgb(183 36 36);
+  width: 10em;
+  height: 2.8em;
+  border: none;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  outline: none;
+}
+
+.header-post-question-btn:hover{
+  background: rgb(158 23 23);
+}
