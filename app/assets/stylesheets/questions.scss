@@ -1,3 +1,39 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.modal-content hr{
+  background-color: #e6e6e6;
+  width: 540px;
+  height: 0.5px;
+  border: none;
+  margin-left: -4%;
+}
+
+.question-form-heading{
+  color: #b92b27;
+}
+
+.question-input-field{
+  margin-top: 20%;
+  margin-left: 2%;
+  width: 480px;
+  height: 20px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+
+}
+
+.question-submit input{
+  float: right;
+  transform: translate(-30%, 420%);
+  background-color: #2e69ff;
+  color: #ffffff;
+  font-size: 16px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+}

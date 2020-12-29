@@ -11,5 +11,39 @@
     </form>
   </div>
   <div class="header-profile"><%= link_to '<button type="button" class="header-profile-logo"></button>'.html_safe, edit_user_registration_path(current_user) %></div>
-  <div class="header-post-question"><%= link_to '<button type="button" class="header-post-question-btn">Add Question</button>'.html_safe, new_question_path %></div>
+  <div class="header-post-question"><button class="header-post-question-btn", id="post-question-btn">Add Question</button></div>
+  <div class="header-log-out"><%= link_to image_tag("header/logout.png"), destroy_user_session_path, method: :delete %></div>
+  <div id="modal-post-question" class="modal">
+    <div class="modal-content">
+      <div class="modal-close-btn"><span class="question-form-heading">Add Question</span><span class="close">&times;</span></div>
+      <hr>
+      <div class="modal-iframe">
+        <%= form_for :post_question, :url => { :action => "create", :controller => 'questions' }  do |f| %>
+        <div class="post-question-form" >
+          <%= f.text_field :email, :type => 'hidden', :value => current_user.email %>
+          <%=f.text_field :ques, :class => 'question-input-field', :placeholder => ' Start your question with "What", "How", "Why", etc.' %>
+          <%= f.text_field :user_id, :type => 'hidden', :value => current_user.id%>
+          <div class="question-submit"><%= f.submit "Add Question"%></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<script>
+var modal = document.getElementById("modal-post-question");
+var btn = document.getElementById("post-question-btn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </header>

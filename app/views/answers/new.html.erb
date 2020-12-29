@@ -9,7 +9,22 @@
         <div class="answer-display">
           <p><%= a.ans %></p>
         </div>
+        <div class="answer-buttons">
           <button class="comment-btn", id=<%='comment-btn-'+a.id.to_s%> > <%= image_tag("header/comment.png")%></button>
+
+          <% if @vote_hash["#{a.id}"] != 0 && @votes.where(answer_id: a.id, user_id: current_user.id, upvote: 1).count == 1 %>
+            <%= link_to image_tag("header/upvoted.png"), upvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+            <p class="upvote_count"><%= @vote_hash["#{a.id}"]%></p>
+          <% else %>
+            <%= link_to image_tag("header/upvote.png"), upvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+          <% end %>
+
+          <% if @vote_hash["#{a.id}"] != 0 && @votes.where(answer_id: a.id, user_id: current_user.id, downvote: 1).count == 1%>
+            <%= link_to image_tag("header/downvoted.png"), downvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+          <% else %>
+            <%= link_to image_tag("header/downvote.png"), downvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+          <% end %>
+          </div>
           <div class="comment-box" id=<%= 'comment-box-'+a.id.to_s%>>
               <div class="post-comment-form" id=<%='post-comment-form-'+a.id.to_s%>>
                 <%= form_for :comment, :url => { :action => "insertComment", :controller => 'comments' }  do |f| %>
@@ -19,7 +34,7 @@
                     <%= f.text_field :user_id, :type => 'hidden', :value => current_user.id %>
                     <%= f.text_field :ques_id, :type => 'hidden', :value => params[:ques_id] %>
                     <div class="comment-submit" id=<%= 'comment-submit-'+a.id.to_s%>>
-                      <%= f.submit%>
+                      <%= f.submit "Submit" %>
                     </div>
                   </div>
                 <% end %>
@@ -37,7 +52,7 @@
         <script>
           var cmt_id = <%= a.id %>
         </script>
-        <%= javascript_pack_tag 'post_comment' %>
+          <%= javascript_pack_tag 'post_comment' %>
     <% end %>
   </div>
 </div>

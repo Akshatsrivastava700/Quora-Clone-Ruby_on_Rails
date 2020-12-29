@@ -5,6 +5,7 @@
 <%= form_for :answer, :url => { :action => "insert" }  do |f| %>
 <%=f.text_area :ans, :class => "answer-form-field" %>
 <%= f.text_field :question_id, :type => 'hidden', :value => params[:ques_id] %>
+<%= f.text_field :user_id, :type => 'hidden'%>
 <div id="ans-submit">
 <%= f.submit%>
 </div>

@@ -48,14 +48,16 @@ hr{
   width: 35em;
   margin-left: 8.0em;
   border: 1px solid #e6e6e6;
+  border-radius: 10px;
 }
 .answer-form-field{
   width: 41.5em;
   height: 17em;
   margin-top: 5%;
-  transform: translateX(0.05%);
+  transform: translate(0.05%,-4%);
   resize: none;
   border: 1px solid #e6e6e6;
+  border-radius: 10px;
   outline: none;
 }
 
@@ -110,4 +112,22 @@ hr{
   margin-left: 2%;
   background-color: #efefef;
   outline: none;
+}
+
+.answer-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.answer-buttons a{
+  margin-left: 20px;
+  margin-top: -1%;
+  margin-right: -10px;
+}
+
+.upvote_count{
+  margin: 2%;
+  transform: translate(100%, -15%);
 }
