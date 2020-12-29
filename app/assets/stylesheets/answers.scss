@@ -20,7 +20,13 @@ hr{
 .question-answer-main-container h1{
   margin-left: 4em;
 }
-
+.question-answer-main-container h1 a{
+  margin-left: 10em;
+}
+.question-answer-main-container h1 img {
+  width: 20px;
+  height: 20px;
+}
 #answer-btn{
   display: flex;
   flex-direction: row;

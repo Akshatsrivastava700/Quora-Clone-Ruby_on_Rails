@@ -1,6 +1,10 @@
 <%= render :partial => 'layouts/header' %>
 <div class="question-answer-main-container">
-  <h1> <%= @question.ques %></h1>
+  <h1> <%= @question.ques %>
+      <% if @question.user_id == current_user.id %>
+      <%= link_to image_tag("header/delete.png"), del_que_url(:ques_id => params[:ques_id]) %>
+      <% end %>
+  </h1>
   <button id="answer-btn"><div class="question-answer-logo"><%= image_tag("header/answer.png")%></div>Answer</button>
   <%= render :partial => 'form' %>
   <hr>
@@ -17,12 +21,19 @@
             <p class="upvote_count"><%= @vote_hash["#{a.id}"]%></p>
           <% else %>
             <%= link_to image_tag("header/upvote.png"), upvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+            <% if @vote_hash["#{a.id}"] != 0 %>
+            <p class="upvote_count"><%= @vote_hash["#{a.id}"]%></p>
+            <% end %>
           <% end %>
 
           <% if @vote_hash["#{a.id}"] != 0 && @votes.where(answer_id: a.id, user_id: current_user.id, downvote: 1).count == 1%>
             <%= link_to image_tag("header/downvoted.png"), downvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
           <% else %>
             <%= link_to image_tag("header/downvote.png"), downvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
+          <% end %>
+
+          <% if a.user_id == current_user.id %>
+            <%= link_to image_tag("header/delete.png"), del_ans_url(:ans_id => a.id, :ques_id => params[:ques_id]) %>
           <% end %>
           </div>
           <div class="comment-box" id=<%= 'comment-box-'+a.id.to_s%>>
@@ -44,6 +55,9 @@
                     <% if cmt.answer_id == a.id%>
                       <div class="comment-display">
                       <p><%= cmt.com %></p>
+                      <% if cmt.user_id == current_user.id %>
+                        <%= link_to image_tag("header/delete.png"), del_cmt_url(:cmt_id => cmt.id, :ques_id => params[:ques_id]) %>
+                      <% end %>
                       </div>
                     <% end %>
                 <% end %>

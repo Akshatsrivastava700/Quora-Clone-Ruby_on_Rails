@@ -1,0 +1,2 @@
+module DeleteQuestionsHelper
+end

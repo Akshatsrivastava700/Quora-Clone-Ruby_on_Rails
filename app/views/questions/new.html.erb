@@ -1,8 +1,0 @@
-<%= form_for @question do |f| %>
-<div class="post-question-form" >
-  <%= f.text_field :email, :type => 'hidden', :value => current_user.email %>
-  <%=f.text_field :ques, :class => 'question-input-field', :placeholder => ' Start your question with "What", "How", "Why", etc.' %>
-  <%= f.text_field :user_id, :type => 'hidden', :value => current_user.id%>
-  <div class="question-submit"><%= f.submit "Add Question"%></div>
-</div>
-<% end %>
