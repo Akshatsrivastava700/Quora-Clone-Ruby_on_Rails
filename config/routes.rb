@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :questions, :answers
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'delete_comment/delete_comment' => 'delete_comment#delete_comment', as: 'del_cmt'
-  get 'delete_answers/delete_answer' => 'delete_answers#delete_answer', as: 'del_ans'
+  get 'questions/answers/delete_answer' => 'answers#delete_answer', as: 'del_ans'
   get 'delete_questions/delete_question' => 'delete_questions#delete_question', as: 'del_que'
   get 'answers/votes/upvote' => 'votes#upvote', as: 'upvote_ans'
   get 'answers/votes/downvote' => 'votes#downvote', as: 'downvote_ans'

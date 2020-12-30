@@ -21,12 +21,19 @@ hr{
   margin-left: 4em;
 }
 .question-answer-main-container h1 a{
-  margin-left: 10em;
+  margin-left: 9.4em;
 }
 .question-answer-main-container h1 img {
   width: 20px;
   height: 20px;
+  transition: 0.2s;
 }
+
+.question-answer-main-container h1 img:hover{
+  width: 24px;
+  height: 24px;
+}
+
 #answer-btn{
   display: flex;
   flex-direction: row;
@@ -125,6 +132,7 @@ hr{
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  transform: translateX(-2%);
 }
 
 .answer-buttons a{
@@ -133,6 +141,15 @@ hr{
   margin-right: -10px;
 }
 
+.answer-buttons img{
+  width: 20px;
+  height: 20px;
+  transition: 0.2s;
+}
+.answer-buttons img:hover{
+  width: 24px;
+  height: 24px;
+}
 .upvote_count{
   margin: 2%;
   transform: translate(100%, -15%);

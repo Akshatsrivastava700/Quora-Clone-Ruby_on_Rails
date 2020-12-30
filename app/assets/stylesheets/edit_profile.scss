@@ -1,0 +1,113 @@
+.edit-main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name{
+  text-transform: capitalize;
+}
+
+.edit-profile-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+.field{
+  margin: 2%;
+}
+
+.edit-name{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.edit-firstname-label, .edit-lastname-label, .edit-pwd-label, .edit-email-label, .edit-current-pwd-label, .edit-pwd-confirm-label{
+  text-transform: capitalize;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  font-weight: bold;
+  color: #696969;
+}
+
+.edit-firstname-input, .edit-lastname-input, .edit-pwd-input, .edit-email-input, .edit-current-pwd-input, .edit-pwd-confirm-input{
+  margin-top: 2%;
+  height: 1.5em;
+  text-indent: 2%;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(200,200,200,0.3);
+  outline: none;
+}
+.edit-firstname-input, .edit-lastname-input{
+  width: 11em;
+}
+.edit-pwd-input, .edit-email-input, .edit-current-pwd-input, .edit-pwd-confirm-input{
+  width: 25em;
+}
+.edit-firstname-label{
+  margin-left: -15%;
+}
+.edit-firstname-input{
+  transform: translateX(-15%);
+}
+.actions input{
+  width: 15em;
+  height: 2em;
+  background-color: #2e69ff;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  color: #ffffff;
+  font-size: 17px;
+  transition: 0.5s;
+  margin-bottom: 5%;
+}
+
+.actions input:hover{
+  background-color: #1f43a1
+}
+
+.delete-account{
+  margin-top: 0%;
+}
+.delete-account h3 {
+  margin-left: 20%;
+  font-weight: 400;
+}
+.delete-account-btns{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.delete-account-btns a{
+  text-decoration: none;
+  color: #2e69ff;
+  margin-right: 0%;
+  margin-left: -15%;
+}
+
+.delete-account-btns a:hover{
+  text-decoration: underline;
+}
+
+.delete-account-btns input{
+  width: 15em;
+  height: 2.3em;
+  font-size: 15px;
+  margin: 5%;
+  margin-right: -20%;
+  margin-left: 20%;
+  outline: none;
+  background-color: #fc2323;
+  color: #ffffff;
+  border: none;
+  border-radius: 60px;
+}

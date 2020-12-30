@@ -33,7 +33,7 @@
           <% end %>
 
           <% if a.user_id == current_user.id %>
-            <%= link_to image_tag("header/delete.png"), del_ans_url(:ans_id => a.id, :ques_id => params[:ques_id]) %>
+            <%= link_to image_tag("header/delete.png"), del_ans_path(:ans_id => a.id, :ques_id => params[:ques_id]) %>
           <% end %>
           </div>
           <div class="comment-box" id=<%= 'comment-box-'+a.id.to_s%>>
