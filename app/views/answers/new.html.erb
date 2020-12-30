@@ -21,7 +21,7 @@
             <p class="upvote_count"><%= @vote_hash["#{a.id}"]%></p>
           <% else %>
             <%= link_to image_tag("header/upvote.png"), upvote_ans_url(:ques_id => params[:ques_id], :ans_id => a.id), method: :get %>
-            <% if @vote_hash["#{a.id}"] != 0 %>
+            <% if @vote_hash["#{a.id}"] != 0 && @votes.where(answer_id: a.id, user_id: current_user.id, upvote: 1).count == 1 %>
             <p class="upvote_count"><%= @vote_hash["#{a.id}"]%></p>
             <% end %>
           <% end %>
