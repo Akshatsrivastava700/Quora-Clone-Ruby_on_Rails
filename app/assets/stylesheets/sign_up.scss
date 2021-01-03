@@ -27,6 +27,7 @@
   font-family: 'Ubuntu';
   font-size: 13px;
   font-weight: bold;
+  margin-left: 2%;
 }
 
 .signup-name {
@@ -171,4 +172,11 @@
   border: 1px solid #3a66ad;
   border-radius: 3px;
   box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+}
+
+#error_explanation p{
+  font-size: 15px;
+  margin-top: -20px;
+  font-weight: 400;
+  color: red;
 }

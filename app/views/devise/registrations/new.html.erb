@@ -31,7 +31,7 @@
       <p>By continuing you indicate that you have read and agree to Quora's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
       <div class="actions">
         <%= link_to "Cancel", new_user_session_path %>
-        <%= f.submit "Sign up", :class => "signup-btn"%>
+        <%= f.submit "Sign up", :class => "signup-btn", :id => "signup-btn"%>
       </div>
     <% end %>
     </div>
@@ -52,5 +52,5 @@
   </div>
 </div>
 </div>
-
+<%= javascript_pack_tag 'signup_password' %>
 <%= render "devise/shared/links" %>
