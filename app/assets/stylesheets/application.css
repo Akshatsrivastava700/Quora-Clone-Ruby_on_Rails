@@ -151,7 +151,7 @@ header {
 }
 
 .header-post-question-btn{
-  background: rgb(183 36 36);
+  background: #c41d1d;
   width: 10em;
   height: 2.8em;
   border: none;
@@ -163,7 +163,7 @@ header {
 }
 
 .header-post-question-btn:hover{
-  background: rgb(158 23 23);
+  background: #9E1717;
 }
 
 .modal {
