@@ -21,6 +21,14 @@
    margin-top: 0;
    margin-bottom: 0;
  }
+
+ .notice-alert .alert{
+   background-color: green;
+   color: white;
+   transform: translateY(-5%);
+   margin-top: 0;
+   margin-bottom: 1%;
+ }
 header a{
   text-decoration: none;
   color: #636466;
