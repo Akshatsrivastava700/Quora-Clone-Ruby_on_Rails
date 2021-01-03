@@ -10,3 +10,11 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+setTimeout(function(){
+  var notice = document.getElementById("notice")
+  var alert = document.getElementById("alert")
+    notice.innerHTML = "";
+    alert.innerHTML = "";
+}, 3000)
