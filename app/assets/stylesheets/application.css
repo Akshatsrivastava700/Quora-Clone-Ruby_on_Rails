@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ .notice-alert .notice{
+   background-color: green;
+   color: white;
+   transform: translateY(-5%);
+   margin-top: 0;
+   margin-bottom: 0;
+ }
 header a{
   text-decoration: none;
   color: #636466;
