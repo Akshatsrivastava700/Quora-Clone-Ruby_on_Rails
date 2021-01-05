@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'answers/votes/upvote' => 'votes#upvote', as: 'upvote_ans'
   get 'answers/votes/downvote' => 'votes#downvote', as: 'downvote_ans'
   get '/create' => 'answers#create'
+  get '/users' => 'home#index'
   post 'answers/insert' => 'answers#insert'
   post 'comments/insertComment' => 'comments#insertComment'
   root to: 'home#index'
